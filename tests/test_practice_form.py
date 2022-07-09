@@ -19,6 +19,10 @@ state = 'NCR'
 city = 'Delhi'
 
 
+def upload_source(param):
+    pass
+
+
 def test_submit_form():
     browser.open('/automation-practice-form')
 
@@ -33,7 +37,10 @@ def test_submit_form():
     browser.element(f'div[aria-label="Choose Thursday, {mothOfBirthName} {dayOfBirth}, {yearOfBirth}"]').click()
     browser.element('#subjectsInput').type(subject).press_enter()
     browser.element('[for=hobbies-checkbox-1]').click()
-    browser.element('#uploadPicture').type(uploadPicture)
+
+    from demoqa_tests.utils import resource
+    browser.element('#uploadPicture').send_keys(resource('1.png'))
+
     browser.element('#currentAddress').type(currentAddress).press_tab()
     browser.element('#state input').type(state).press_tab()
     browser.element('#city input').type(city).press_enter()
@@ -52,23 +59,3 @@ def test_submit_form():
         f'Address {currentAddress}',
         f'State and City {state} {city}'
     ))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
