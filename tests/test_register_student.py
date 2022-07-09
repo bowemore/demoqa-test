@@ -19,11 +19,7 @@ state = 'NCR'
 city = 'Delhi'
 
 
-def upload_source(param):
-    pass
-
-
-def test_submit_form():
+def test_register_student():
     browser.open('/automation-practice-form')
 
     browser.element('#firstName').type(firstName)
