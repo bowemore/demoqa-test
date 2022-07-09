@@ -14,7 +14,6 @@ yearOfBirth = '1966'
 subject = 'English'
 hobbies = 'Sports'
 currentAddress = "10250 Constellation Blvd., 9th Floor, Los Angeles"
-uploadPicture = r'C:\Users\WALLE\PycharmProjects\lesson5_selene\test\1.png'
 state = 'NCR'
 city = 'Delhi'
 
